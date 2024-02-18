@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EmpDetails from "./EmpDetails";
 import './Emps.css';
 
@@ -15,3 +16,31 @@ function Emps(props){
     );
 }
 export default Emps;
+=======
+import React, { useState } from 'react';
+import EmpList from "./EmpList";
+import EmpFilter from "./EmpFilter";
+
+import './Emps.css';
+
+const Emps = (props) => {
+  const [filteredYear, setFilteredYear] = useState("2020");
+
+  const filterChangeHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
+  };
+
+  const filteredEmps = props.items.filter(emp => {
+    return emp.DOJ.getFullYear().toString() === filteredYear;
+  });
+
+  return (
+    <div className='Emps'>
+      <EmpFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
+      <EmpList items={filteredEmps}/>
+
+    </div>
+  );
+}
+export default Emps;
+>>>>>>> 20797b8 (added use state)

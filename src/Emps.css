@@ -1,8 +1,16 @@
 .Emps{
     background-color: black;
+<<<<<<< HEAD
     padding:10px;
     border-radius: 12px;
     color:white;
     justify-content: center;
+=======
+    padding:1rem;
+    margin:2rem auto;
+    width:50rem;
+    max-width: 95%;
+    border-radius:12px;
+>>>>>>> 20797b8 (added use state)
 
 }
