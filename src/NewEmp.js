@@ -1,16 +1,7 @@
-import EmployeForm from "./EmpForm";
+
 import './NewEmp.css'
 
-const NewEmploye=(props)=>{
-
-    const saveEmpDataHandler=(enteredEmpData)=>{
-    
-        const empData={
-            ...enteredEmpData,
-            id: Math.random().toString(),
-        };
-        props.onEmpAdded(empData)
-    }
+const NewEmploye=({children})=>{
 
     return (
         
@@ -19,8 +10,7 @@ const NewEmploye=(props)=>{
         // </div>
 
         <div className="new-emp">
-            <EmployeForm onSaveEmpData={saveEmpDataHandler}/>
-
+            {children}
         </div>
     );
 }

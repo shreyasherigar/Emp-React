@@ -1,8 +1,14 @@
 import './EmpForm.css'
-
-import { useState } from 'react';
+import { EmpContext } from './emp-context';
+import { useState ,useContext} from 'react';
+import {useDispatch} from 'react-redux';
+import { empActions} from './Store';
 
 const EmployeForm=(props)=>{
+
+    // const {onSaveEmpData} =useContext(EmpContext);
+
+    const dispatch=useDispatch();
 
 
     const [enteredName, setEnteredName]=useState('');
@@ -29,7 +35,11 @@ const EmployeForm=(props)=>{
             DOJ:new Date(enteredDoj)
         }
         // console.log(employeData);
-        props.onSaveEmpData(empData)
+        // props.onSaveEmpData(empData)
+        // onSaveEmpData(empData);
+        // dispatch({type:"ADD_EMP",payload:empData});
+        dispatch(empActions.addEmp(empData));
+
         setEnteredName('');
         setEnteredExp('');
         setEnteredDoj('');
