@@ -1,11 +1,11 @@
 
 import { useEffect } from 'react';
-import EmployeForm from './EmpForm';
-import Emps from './Emps';
-import NewEmploye from './NewEmp';
+import EmployeForm from './Emp/EmpForm';
+import Emps from './Emp/Emps';
+import NewEmploye from './Emp/NewEmp';
 // import {useState}from 'react';
 // import { EmpContext } from './emp-context';
-import EmpContextProvider from './emp-context';
+import EmpContextProvider from './Emp/emp-context';
 import {useSelector,useDispatch} from 'react-redux';
 import { sendEmpData } from './Store';
 

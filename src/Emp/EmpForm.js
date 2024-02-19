@@ -2,7 +2,7 @@ import './EmpForm.css'
 import { EmpContext } from './emp-context';
 import { useState ,useContext} from 'react';
 import {useDispatch} from 'react-redux';
-import { empActions} from './Store';
+import { empActions} from '../Store';
 
 const EmployeForm=(props)=>{
 

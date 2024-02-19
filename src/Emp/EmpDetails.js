@@ -27,4 +27,4 @@ const EmpDetails=(props)=>{
 
     );
 }
-export default EmpDetails
+export default EmpDetails;
